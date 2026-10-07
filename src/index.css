@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-sundar-bg: #07110F;
+  --color-sundar-card: #0D1B18;
+  --color-sundar-panel: #112420;
+  --color-sundar-border: #1C3630;
+  --color-sundar-accent: #50E3A4;
+  --color-sundar-warning: #F5C451;
+  --color-sundar-danger: #FF6B6B;
+  --color-sundar-text: #EAF7F2;
+  --color-sundar-muted: #8FA7A0;
+}
+
+/* Custom scrollbars and scientific grid lines */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07110F;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C3630;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a5249;
+}
+
+.scientific-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(80, 227, 164, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(80, 227, 164, 0.04) 1px, transparent 1px);
+}
+
+.radar-sweep {
+  background: conic-gradient(from 0deg at 50% 50%, rgba(80, 227, 164, 0.15) 0deg, rgba(80, 227, 164, 0.02) 60deg, transparent 90deg);
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  header, nav, footer, .print\:hidden {
+    display: none !important;
+  }
+  #printable-report-content {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+}
+

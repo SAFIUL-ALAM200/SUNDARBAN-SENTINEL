@@ -1,0 +1,6 @@
+{
+  "name": "Sundarbans Sentinel",
+  "description": "AI-Powered Satellite Environmental Monitoring for the Sundarbans — NASA Space Apps Challenge 2026 prototype.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
